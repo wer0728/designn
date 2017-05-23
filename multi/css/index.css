@@ -1,0 +1,54 @@
+body {
+    margin-left:auto;
+    margin-right:auto;
+    width:1000px;
+    height: 100vh;
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 200;
+    font-family: "spoqa han sans";
+}
+
+a  {
+    color: #ff9640;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3981e6;
+
+}
+
+
+.active-page  {
+padding-left: 5px;
+border-left: 3px lightsalmon solid;
+
+}
+
+
+/*색상 경로 반복설정 위치 고정설정;*/
+
+/* background:transparent url */
+
+
+#travel {
+    background: url("../travel.jpg")no-repeat;
+    background-size:cover;
+
+}
+
+#spring {
+    background: url("../spring.jpg");
+    background-size:cover;
+
+}
+
+#summer {
+    background: url("../summer.jpg")no-repeat;
+    background-size:cover;
+}
