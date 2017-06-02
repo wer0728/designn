@@ -1,0 +1,91 @@
+html {
+    /*rem단위의 기준 설정값*/
+    /*왜 10px로 설정하는가 계산이 용이*/
+font-size: 10px;
+}
+
+/*가이드라인 화면에 보여준다.*/
+body {
+    height: 100vh;
+    margin: 0;
+    background: url("../assets/leading21.png"  );
+
+    /*본문디자인 (공통속성 상속)*/
+    color: #6b6a6a;
+    font:300 1,4rem/1.5 'NanumBarunGothic';
+}
+
+
+/*단락디자인*/
+P{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+
+/* 제목 디자인: modular scale = 1.24 */
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  color: #272727;
+}
+
+h1 {
+  font-weight: 200;
+    line-height: 2.1rem
+}
+
+h4, h3, h2 {
+  font-weight: 300;
+    line-height: 4.2rem
+}
+
+h5, h6 {
+  font-weight: 400;
+  line-height: 2.1rem
+}
+
+h1 {
+  font-size: 3.6349em;     /* 2.9314em x 1.24 */
+  line-height: 1.2380;     /* 3 x (1.5/3.6349) */
+  margin-bottom: 0.4126em; /* (1.5/3.6349) */
+}
+
+h2 {
+  font-size: 2.9314em;     /* 2.3641em x 1.24 */
+}
+
+h3 {
+  font-size: 2.3641em;     /* 1.9066em x 1.24 */
+}
+
+h4 {
+  font-size: 1.9066em;     /* 1.5376em x 1.24 */
+}
+
+h5 {
+font-size: 1.5376em; /*1.24em x 1.24*/
+}
+
+h6 {
+/* 본문 글자 크기 x 글자 크기 배율*/
+font-size: 1.24em;/*1em=14px*/
+/* 행간 = 디자인 상의 줄 개수 x (행간비율 /  글자크기 비율)*/
+line-height: 1.2100; /*1칸* (1.5/1.24);*/
+/*아래쪽 마진 = 행간비율 / 글자크기비율*/
+margin-bottom: 1.2096;
+
+}
+
+
+.al
+
+
+
+
+.container {
+width:914px;
+margin-left: auto;
+margin-right: auto;
+
+
+}

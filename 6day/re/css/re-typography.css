@@ -1,0 +1,113 @@
+html {
+    font-size: 10px;
+    /* rem 단위의 기준 설정 값 */
+    /* 왜? 10px로 설정하는가? 계산이 용이해지기 때문 */
+    overflow-y: scroll;
+}
+
+/*가이드라인 화면에 보여준다.*/
+body {
+ margin: 0;
+
+
+/* 본문 디자인 (공통 속성 상속)*/
+    color: #6b6a6a;
+    font: 300 1.4rem/1.5 "Nanum Barun Gothic";
+}
+
+body.grid{
+    height:100vh;
+    background: url("../asset/leading21.png");
+}
+
+
+/* 단락 디자인 */
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.list{
+  margin-top
+  margin bottom: 2.1rem;
+}
+
+.list.is-horizontal li {
+  float: left;
+  margin-right: 3rem;
+}
+
+.list a {
+  display: block;
+}
+
+/* 상태 디자인 (Status Design)
+ 기본 상태(:link)
+ 방문한 상태(:visited)
+ 마우스 올라간 상태(:hover)
+ 포커스 상태(:focus)
+ 활성화 상태(:active)
+
+*/
+
+.list a link {
+color: #272727;
+text-decoration: none;
+}
+.list a visited {
+color: #444444;
+}
+.list a hover {
+color: #787778;
+}
+.list a focus {
+ outline: 3px solid #ff0;
+ }
+
+.list a active {
+background: #ff0;
+  color: #000;
+}
+
+
+/* 제목 디자인: modular scale = 1.24 */
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 2.1rem;
+    color: #272727;
+}
+
+h1 {
+    font-weight: 300;
+    line-height: 4.2rem;
+}
+h2,h3,h4 {
+    font-weight: 300;
+    line-height: 4.2rem;
+}
+
+h5,h6 {
+    font-weight: 400;
+    line-height: 2.1rem;
+}
+
+h1 {font-weight: 200;
+  font-size: 5.0890rem;
+  line-height: 6.3rem;}
+h2 {font-size: 4.104rem;}
+h3 {font-size: 3.310rem;}
+h4 {font-size: 2.699rem;}
+h5 {font-size: 2.153rem;}
+h6 {font-size: 1.736rem;}
+
+
+
+.align-justify {
+  text-align: justify;
+}
+
+.container {
+width:914px;
+margin-left: auto;
+margin-right: auto;
+}
