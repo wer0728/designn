@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 포지셔닝 테크닉-z-index</title>
+
+    <style>
+    .box{
+        padding: 1rem; border:1px solid #aaa;
+    }
+    .parent{
+        background: #bcbcbc;
+    }
+    .child{
+        width: 14rem;
+        height: 14rem;
+        background: #fff;
+        font-weight:700;
+     }
+    .one{
+        position: relative;
+          z-index: 1000000;
+        background:hsl(345, 65%,70%)
+        }
+    
+    .two{
+        position: absolute;
+        z-index: 100;
+        text-shadow:0 2px 0.5rem hsl(167, 65%, 40%) ;
+        background:hsl(165, 65%, 70%)
+        }
+
+    .three{ 
+        position: absolute;
+        z-index: 1000;
+        top:150px;
+        left: 50px;
+        background:hsl(243, 65%,70%, 0.6);
+    }
+
+
+/* 정리하면 부모가 다른 자식들 간의 z-index 경쟁은 아무 소용 없다.
+    부모의 z-index가 높아야 자식의 z-index 영향도 반영된다.
+    */
+
+
+    /*첫번쨰 부모 설정*/
+.parent.is-1st {z-index: 0;}
+.is-1st .one {z-index: 100;}
+.is-1st .two {z-index: 110;}
+.is-1st .three {z-index: 190;}
+
+    /*두번쨰 부모 설정*/
+.parent.is-2nd {
+    z-index: 1;
+    top: 90px;
+    left: 700px;
+    width: 50%;
+    background: rgba(199, 33, 100, 50%);
+    }
+
+.is-2nd .one   { z-index: 110; background-color: hsla(12, 65%, 70%, 0.6) }
+.is-2nd .two   { background-color: hsla(76, 65%, 70%, 0.6) }
+.is-2nd .three { background-color: hsla(112, 65%, 70%, 0.6) }
+
+
+
+    </style>
+</head>
+
+<body>
+   <div class="box parent is-1st">
+    <div class="box child one">one</div>
+    <div class="box child two">two</div>
+    <div class="box child three">three</div>
+  </div>
+
+  <div class="box parent is-2nd">
+    <div class="box child one">one</div>
+    <div class="box child two">two</div>
+    <div class="box child three">three</div>
+  </div>
+
+
+</body>
+</html> 

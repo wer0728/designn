@@ -13,7 +13,7 @@ body {
 }
 /* 기준선 가이드 (Baseline Guide) */
 .guide {
-  height: 100vh;
+  height: 300vh;
   background: linear-gradient(180deg, transparent 2rem, hsla(246.9, 60.2%, 63.4%, 0.6) 2rem);
   background-size: 0.1rem 2.1rem;
 }
@@ -37,88 +37,158 @@ body {
   background: hsla(246.9, 60.2%, 63.4%, 0.95);
 }
 
+img {
+	vertical-align: middle;
+}
+
 /*타이포그래피*/
-p, h1, h2, h3, h4, h5, h6 {
+/*공통 디자인*/
+p, h1, h3, h5, h6 {
   margin-top: 0;
   margin-bottom: 2.1rem;
 }
+
+/*단락 디자인*/
 p {
   letter-spacing: -0.02em;
 }
 
+/*제목 디자인*/
+h1, h3 {
+	font-weight: 300;
+	letter-spacing: -0.05em; /*-50/1000=-0.05em*/
+	color: #333741;
+}
+
+h5, h6 {
+	font-weight: 400;
+	line-height: 2.1rem;
+	letter-spacing: -0.05em; /*-50/1000=-0.05em*/
+}
+
 h1 {
-font-size: ;
-line-height: ;
-
-
-
+	font-size: 5.46rem;
+	line-height: 6.3rem;
 }
-h2 {}
+
 h3 {
-font-size: 3.17rem;
-line-height :4.2rem;
-color: 
-
-}
-h4 {}
-
-h5,h6{
-font-weight:400;
-line-height: 2.1rem;
-letter-spacing: -0.05em;
+	font-size: 3.17rem;
+	line-height: 4.2rem;
 }
 
-h5 {font-size:  1.838rem;}
+h5 {
+	font-size: 1.838rem;
+	color: #787f94;
+}
 
 h6 {
-font-size: 1.56rem;
-line-height: ;
-font-weight: 400;
-letter-spacing: -0.05em;
-color: #47494e
+	font-size: 1.56rem;
+	color: #47494e;
 }
 
 
-
-/*목록디자인*/
-
-ol { 
-
+/*목록 디자인*/
+.reset-list {
+	/*초기화 시켜주는 css*/
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
 }
-li { 
 
-}
-dl{ 
-
-}
-dt{ 
-
-}
-dl{ 
+li {
 
 }
 
-/*하이퍼링크디자인*/
-
-a:link {
-
-  color: ;
-  text-decoration: none;
+dl {
 
 }
 
-a:hover {
-  color: ;
+dt {
 
 }
 
-a:focus {}
-a:active {}
+dd{
+	margin:0;
+	padding:0;
+}
+
+
+/*하이퍼링크 디자인*/
+a:link, a:visited {
+	color: #50c2db;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: #227e92;
+}
+
 
 /*레이아웃*/
 .container {
-width: 82rem;
-margin-left:auto ;
-margin-right: auto;
-padding-top: 8.4rem;
+	width: 82rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 8.4rem;
+}
+
+header {
+	text-align: center;
+}
+
+main {
+	margin-top: 4.2rem;
+}
+
+/*.order-important {}*/
+.order-teeth-manage {
+	margin-top: 2.1rem;
+	counter-reset: order-teeth-manage;
+}
+
+.order-teeth-manage li::before {
+	content: counter(order-teeth-manage) '.';
+	counter-increment: order-teeth-manage;
+	margin-right: 5px;
+}
+
+.order-title {
+	display: inline-block; /*인라인 요소를 블록 요소로 변경*/
+	margin-top: 2.1rem;
+	margin-bottom:2.1rem;
+	font-weight: 700;
+	color: #787f94;
+	letter-spacing: -0.01em; /*-10/1000=-0.01em*/
+}
+
+/*.section-QnA {}*/
+.section-teeth-manage {
+	margin-top: 2.1rem;
+	counter-reset: section-teeth-manage;
+}
+
+.section-teeth-manage li::befer {
+	content: counter(section-teeth-manage) '.';
+	counter-increment: section-teeth-manage;
+	margin-right: 5px;
+}
+
+.section-title {
+	margin-top: 6.3rem;
+}
+
+.section-sub-title {
+	display: inline-block; /*인라인 요소를 블록 요소로 변경*/
+	font-weight: 700;
+	color: #2b2c2f;
+	letter-spacing: -0.01em; /*-10/1000=-0.01em*/
+}
+
+.section-p {
+	margin-top: 2.1rem;
+}
+
+footer {
+	font-weight: 400;
+	letter-spacing: -0.02em;
 }
